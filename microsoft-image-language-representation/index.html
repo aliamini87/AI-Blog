@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="turbo-root" content="/retypesite">
+    <meta name="turbo-cache-control" content="no-cache">
+
+    <!-- Primary Meta Tags -->
+    <title>Turing Bletchley: A Universal Image Language Representation model by Microsoft</title>
+    <meta name="title" content="Turing Bletchley: A Universal Image Language Representation model by Microsoft">
+    <meta name="description" content="Today, the Microsoft Turing team is thrilled to introduce Turing Bletchley, a 2." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aliamini87.github.io/retypesite/microsoft-image-language-representation/">
+    <meta property="og:title" content="Turing Bletchley: A Universal Image Language Representation model by Microsoft">
+    <meta property="og:description" content="Today, the Microsoft Turing team is thrilled to introduce Turing Bletchley, a 2.">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aliamini87.github.io/retypesite/microsoft-image-language-representation/">
+    <meta property="twitter:title" content="Turing Bletchley: A Universal Image Language Representation model by Microsoft">
+    <meta property="twitter:description" content="Today, the Microsoft Turing team is thrilled to introduce Turing Bletchley, a 2.">
+    
+    <script>(function () { var el = document.documentElement, m = localStorage.getItem("/retypesite/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
+
+    <link href="/retypesite/resources/css/retype.css?v=1.11.1.692385966598" rel="stylesheet" data-turbo-track="reload" />
+
+    <script type="text/javascript" src="/retypesite/resources/js/config.js?v=1.11.1.692385966598" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/retypesite/resources/js/retype.js?v=1.11.1" defer data-turbo-track="reload"></script>
+    <script id="lunr-js" type="text/javascript" src="/retypesite/resources/js/lunr.js?v=1.11.1.692385966598" defer></script>
+</head>
+    <body>
+        <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
+    <div class="absolute bottom-0 left-0 bg-gray-100 dark:bg-dark-800" style="top: 5rem; right: 50%"></div>
+
+    <header id="docs-site-header" class="sticky top-0 z-30 flex w-full h-16 bg-white border-b border-gray-200 md:h-20 dark:bg-dark-850 dark:border-dark-650">
+    <div class="container relative flex items-center justify-between flex-grow pr-6 md:justify-start">
+        <!-- Mobile menu button skeleton -->
+        <button v-cloak class="skeleton docs-mobile-menu-button flex items-center justify-center flex-shrink-0 overflow-hidden dark:text-white focus:outline-none rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+        <div v-cloak id="docs-sidebar-toggle"></div>
+
+        <!-- Logo -->
+        <div class="flex items-center justify-between h-full py-2 md:w-75">
+            <div class="flex items-center px-2 md:px-6">
+                <a id="docs-site-logo" href="/retypesite/" class="flex items-center leading-snug text-2xl">
+                    <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">AI Notes</span>
+                </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">Blog</span>
+            </div>
+
+            <span class="hidden h-8 border-r md:inline-block dark:border-dark-650"></span>
+        </div>
+
+        <div class="flex justify-between md:flex-grow">
+            <!-- Top Nav -->
+            <nav class="hidden md:flex">
+    <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+        <li class="md:mr-6">
+            <a class="inline-flex items-center py-2 md:mb-0 text-sm text-gray-400 whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="/retypesite/">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
+                    <g fill="currentColor">
+                        <path fill-rule="evenodd" d="M11.03 2.59a1.5 1.5 0 011.94 0l7.5 6.363a1.5 1.5 0 01.53 1.144V19.5a1.5 1.5 0 01-1.5 1.5h-5.75a.75.75 0 01-.75-.75V14h-2v6.25a.75.75 0 01-.75.75H4.5A1.5 1.5 0 013 19.5v-9.403c0-.44.194-.859.53-1.144l7.5-6.363zM12 3.734l-7.5 6.363V19.5h5v-6.25a.75.75 0 01.75-.75h3.5a.75.75 0 01.75.75v6.25h5v-9.403L12 3.734z"/>
+                    </g>
+                </svg>
+                <span>Home</span>
+            </a>
+        </li>
+        <li class="md:mr-6">
+            <a class="inline-flex items-center py-2 md:mb-0 text-sm text-gray-400 whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://github.com/aliamini87/retypesite" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
+                    <g fill="currentColor">
+                        <symbol id="mark-github-icon-symbol" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></symbol><use xlink:href="#mark-github-icon-symbol" />
+                    </g>
+                </svg>
+                <span>GitHub</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+            <!-- Header Right Skeleton -->
+            <div v-cloak class="flex justify-end flex-grow skeleton">
+
+                <!-- Search input mock -->
+                <div class="relative hidden w-40 lg:block lg:max-w-sm lg:ml-auto">
+                    <div class="absolute flex items-center justify-center h-full pl-3 dark:text-dark-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-base" width="16" height="16" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation"  style="margin-bottom: 1px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                    </div>
+
+                    <input class="w-full h-10 transition-colors duration-200 ease-in bg-gray-200 border border-transparent rounded md:text-sm hover:bg-white hover:border-gray-300 focus:outline-none focus:bg-white focus:border-gray-500 dark:bg-dark-600 dark:border-dark-600 placeholder-gray-400 dark:placeholder-dark-400"
+                    style="padding: 0.625rem 0.75rem 0.625rem 2rem" type="text" placeholder="Search" />
+                </div>
+
+                <!-- Mobile search button mock -->
+                <div class="flex items-center justify-center w-10 h-10 lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 icon-base" width="20" height="20" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation"  style="margin-bottom: 0px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                </div>
+
+                <!-- Dark mode switch placehokder -->
+                <div class="w-10 h-10 lg:ml-2"></div>
+
+                <!-- History button mock -->
+                <div class="flex items-center justify-center w-10 h-10" style="margin-right: -0.625rem;">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 icon-base" width="22" height="22" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation"  style="margin-bottom: 0px;"><g fill="currentColor" ><g ><path d="M12.01 6.01c-.55 0-1 .45-1 1V12a1 1 0 00.4.8l3 2.22a.985.985 0 001.39-.2.996.996 0 00-.21-1.4l-2.6-1.92V7.01c.02-.55-.43-1-.98-1z"></path><path d="M12.01 1.91c-5.33 0-9.69 4.16-10.05 9.4l-.29-.26a.997.997 0 10-1.34 1.48l1.97 1.79c.19.17.43.26.67.26s.48-.09.67-.26l1.97-1.79a.997.997 0 10-1.34-1.48l-.31.28c.34-4.14 3.82-7.41 8.05-7.41 4.46 0 8.08 3.63 8.08 8.09s-3.63 8.08-8.08 8.08c-2.18 0-4.22-.85-5.75-2.4a.996.996 0 10-1.42 1.4 10.02 10.02 0 007.17 2.99c5.56 0 10.08-4.52 10.08-10.08.01-5.56-4.52-10.09-10.08-10.09z"></path></g></g></svg>
+                </div>
+            </div>
+
+            <div v-cloak class="flex items-center justify-end flex-grow">
+                <div id="docs-mobile-search-button"></div>
+                <doc-search-desktop></doc-search-desktop>
+
+                <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                <doc-history></doc-history>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+    <div class="container relative flex bg-white">
+        <!-- Sidebar Skeleton -->
+<div v-cloak class="fixed flex flex-col flex-shrink-0 duration-300 ease-in-out bg-gray-100 border-gray-200 sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton dark:bg-dark-800 dark:border-dark-650">
+
+    <!-- Render this div, if config.showSidebarFilter is `true` -->
+    <div class="flex items-center h-16 px-6">
+        <input class="w-full h-8 px-3 py-2 transition-colors duration-200 ease-linear bg-white border border-gray-200 rounded shadow-none text-sm focus:outline-none focus:border-gray-600 dark:bg-dark-600 dark:border-dark-600" type="text" placeholder="Filter" />
+    </div>
+
+    <div class="pl-6 mb-4 mt-1">
+        <div class="w-32 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+        <div class="w-48 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+        <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+        <div class="w-32 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+        <div class="w-48 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+        <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+    </div>
+
+
+    <div class="flex-shrink-0 mt-auto bg-transparent dark:border-dark-650">
+        <a
+    class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by"
+    target="_blank"
+    href="https://retype.com/"
+    rel="noopener"
+>
+    <span class="text-xs whitespace-nowrap">Powered by</span>
+    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+</a>
+
+    </div>
+</div>
+
+<!-- Sidebar component -->
+<doc-sidebar v-cloak>
+    <template #sidebar-footer>
+        <div
+            class="flex-shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-dark-650"
+        >
+
+            <div class="py-3 px-6 md:hidden border-b dark:border-dark-650">
+                <nav>
+                    <ul class="flex flex-wrap justify-center items-center">
+                        <li class="mr-6">
+                            <a class="block py-1 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="/index.md">Home</a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="block py-1 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://github.com/aliamini87/retypesite">GitHub</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+
+            <a
+    class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by"
+    target="_blank"
+    href="https://retype.com/"
+    rel="noopener"
+>
+    <span class="text-xs whitespace-nowrap">Powered by</span>
+    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+</a>
+
+        </div>
+    </template>
+</doc-sidebar>
+
+
+        <div class="flex-grow min-w-0 dark:bg-dark-850">
+            <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+            <div class="flex">
+    <div class="flex-grow min-w-0 px-6 md:px-16">
+        <main class="relative pt-6 pb-16">
+            <div class="docs-markdown" id="docs-content">
+                <!-- Rendered if sidebar right is enabled -->
+                <div id="docs-sidebar-right-toggle"></div>
+               
+                <!-- Page content  -->
+<doc-anchor-target id="turing-bletchley-a-universal-image-language-representation-model-by-microsoft" class="break-words">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#turing-bletchley-a-universal-image-language-representation-model-by-microsoft">#</doc-anchor-trigger>
+        <span>Turing Bletchley: A Universal Image Language Representation model by Microsoft</span>
+    </h1>
+</doc-anchor-target>
+<div class="-mt-3 mb-12 flex flex-wrap text-sm text-gray-400 dark:text-dark-350">
+    <div class="flex items-center flex-shrink-0">Published&nbsp;<span>2021-11-04</span></div>
+</div>
+
+<p><figure class="content-center">
+    <img src="https://www.microsoft.com/en-us/research/uploads/prod/2021/11/1400x788_Bletchly_no_logo_dot_graphic-1-1024x576.jpg" alt="" />
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<p>Today, the <a href="https://turing.microsoft.com/">Microsoft Turing team</a> is thrilled to introduce Turing Bletchley, a 2.5-billion parameter Universal Image Language Representation model (T-UILR) that can perform image-language tasks in 94 languages. T-Bletchley has an image encoder and a universal language encoder that vectorize input image and text respectively so that semantically similar images and texts align with each other. This model shows uniquely powerful capabilities and a groundbreaking advancement in image language understanding.</p>
+<p>T-Bletchley outperforms state-of-the-art models, like <a href="https://arxiv.org/abs/2102.05918">Google’s ALIGN</a>, on English image-language data sets (ImageNet, CIFAR, and COCO), and outperforms <a href="https://arxiv.org/abs/1909.03493">MULE,</a> <a href="https://arxiv.org/abs/2004.04312">SMALR,</a> and <a href="https://arxiv.org/abs/2006.02635">M3P</a> on universal image language data sets (Multi30k and COCO). To see T-Bletchley in action navigate to the <a href="https://go.microsoft.com/fwlink/?linkid=2178904">demo</a>.</p>
+<doc-anchor-target id="significance-of-multi-modal-and-universal">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#significance-of-multi-modal-and-universal">#</doc-anchor-trigger>
+        <span>Significance of multi-modal and universal</span>
+    </h2>
+</doc-anchor-target>
+<p><figure class="content-center">
+    <img src="https://www.microsoft.com/en-us/research/uploads/prod/2021/11/Bletchley-Fig1-1024x682.jpg" alt="Three sets of four images. The first set shows different views of the Eiffel Tower at night retrieved using a Korean-language query. The second set shows different images of people playing soccer in the rain, retrieved using a query in Spanish. The third set shows different views of cats interacting with computers using a Finnish-language query that translates to English as “cat programming”. " />
+    <figcaption class="caption">Three sets of four images. The first set shows different views of the Eiffel Tower at night retrieved using a Korean-language query. The second set shows different images of people playing soccer in the rain, retrieved using a query in Spanish. The third set shows different views of cats interacting with computers using a Finnish-language query that translates to English as “cat programming”. </figcaption>
+</figure>
+</p>
+<p>Image showing “a beautiful sunset on the beach”</p>
+<p>Language and vision are inherently linked. When we hear the statement “a beautiful sunset on the beach” we imagine an image similar to the one above. Models that focus only on language fail to capture this link. To these models, sentences are no more than a grammatically correct sequence of words.</p>
+<p>Furthermore, vision is a global modality. The same sight of the beach sunset can be narrated in any language (<em>“una hermosa puesta de sol en la playa”</em>, <em>“un beau coucher de soleil sur la plage”</em>, <em>“Matahari terbenam yang indah di pantai”</em>, etc.), and it would not change the corresponding visual representation. Traditional multi-modal models tie vision to a particular language (most commonly English) and therefore fail to capture this universal property of vision.</p>
+<p>With T-Bletchley, we address both these shortcomings. We take a multi-modal approach that advances a computer’s ability to understand language as well as understand images natively, just from pixels. Additionally, we consider language modality with a universal-first approach when developing the model. The result is a one-of-a-kind universal multi-modal model that understands images and text across 94 different languages, resulting in some impressive capabilities. For example, by utilizing a common image-language vector space, without using any metadata or extra information like surrounding text, T-Bletchley can retrieve images that match a text description provided in any language. It can also find images that answer text-based questions in any language, or images that are semantically like another image.</p>
+<doc-anchor-target id="t-bletchley-in-action">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#t-bletchley-in-action">#</doc-anchor-trigger>
+        <span>T-Bletchley in action</span>
+    </h2>
+</doc-anchor-target>
+<p>To test the capabilities of T-Bletchley, we built an image retrieval system consisting of 30 million randomly sampled images from the web that were unseen by the model during training. <a href="https://go.microsoft.com/fwlink/?linkid=2178904">The images – without any captions, alt-text or other forms of text metadata – were encoded by the image encoder and stored in an index</a>.</p>
+<p>We built two types of retrieval systems – text-to-image and image-to-image. We vectorized the input queries (for text-to-image with the text encoder and for image-to-image with the image encoder). We use the encoded vector as key and query the index to find its nearest neighbors in the vector space using the approximate nearest neighbor (ANN) algorithm HNSW. The nearest neighbors are then displayed as the image retrieval results.</p>
+<p>Today’s image retrieval systems depend heavily on text metadata that is available for images, e.g., image captions, alt-text, surrounding text, image URL, etc. T-Bletchley is unique in that the system can do image retrieval from just the encoded image vectors and does not use any text metadata. This is a big step in true image understanding as compared to today’s systems. Moreover, the demo was built directly with the pre-trained model and not finetuned with any image retrieval task.</p>
+<p>In addition, today’s image retrieval systems also use object tagging algorithms applied to images which augment the text metadata (i.e., add tags like car, house, beach, etc. generated from the image). Since the object tagging systems are trained by human-labeled data, the number of classes (tags) is extremely limited. T-Bletchley is trained with unsupervised data, and as a result, it understands a very large number of objects, actions, and many other concepts (dancing, programming, racing, etc.) of the real world.</p>
+<p>Below are some examples that showcase the capabilities of T-Bletchley in an image retrieval system.</p>
+<doc-anchor-target id="universal-text-to-image-retrieval">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#universal-text-to-image-retrieval">#</doc-anchor-trigger>
+        <span>Universal text-to-image retrieval</span>
+    </h2>
+</doc-anchor-target>
+<p>Below are examples of images retrieved using text-based queries in multiple languages:</p>
+<p><figure class="content-center">
+    <img src="https://www.microsoft.com/en-us/research/uploads/prod/2021/11/BletchlyFig3-1024x539.png" alt="Three sets of four images. The first set shows different views of the Eiffel Tower at night retrieved using a Korean-language query. The second set shows different images of people playing soccer in the rain, retrieved using a query in Spanish. The third set shows different views of cats interacting with computers using a Finnish-language query that translates to English as “cat programming”. " />
+    <figcaption class="caption">Three sets of four images. The first set shows different views of the Eiffel Tower at night retrieved using a Korean-language query. The second set shows different images of people playing soccer in the rain, retrieved using a query in Spanish. The third set shows different views of cats interacting with computers using a Finnish-language query that translates to English as “cat programming”. </figcaption>
+</figure>
+</p>
+<p>The third example shows that T-Bletchley “understands” the act of programming and has carved out a vector subspace dedicated solely for images of cats programming. True image understanding can be used to improve current retrieval systems to place a greater weight on the image itself.</p>
+<doc-anchor-target id="code-switched-retrieval">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#code-switched-retrieval">#</doc-anchor-trigger>
+        <span>Code-switched retrieval</span>
+    </h2>
+</doc-anchor-target>
+<p><figure class="content-center">
+    <img src="https://www.microsoft.com/en-us/research/uploads/prod/2021/11/BletchleyFig3.1-1024x339.png" alt="Two sets of four images. The first set shows small airplanes landing or at rest on unpaved runways, retrieved by a query mixing English and Khmer language. The second set shows groups of people posing for a photo at the Great Wall of China, retrieved using a query mixing English and Chinese.  " />
+    <figcaption class="caption">Two sets of four images. The first set shows small airplanes landing or at rest on unpaved runways, retrieved by a query mixing English and Khmer language. The second set shows groups of people posing for a photo at the Great Wall of China, retrieved using a query mixing English and Chinese.  </figcaption>
+</figure>
+</p>
+<p>T-Bletchley can even retrieve images from non-English language queries written with English script!</p>
+<p><figure class="content-center">
+    <img src="https://www.microsoft.com/en-us/research/uploads/prod/2021/11/Bletchleyfig4-1024x346.png" alt="Two sets of four images. The first set shows groups of children playing cricket, retrieved using a query mixing English and English-script Hindi. The second set shows three photos and one artist’s rendering of a train next to bodies of water, retrieved using a query mixing English and English-script Japanese. " />
+    <figcaption class="caption">Two sets of four images. The first set shows groups of children playing cricket, retrieved using a query mixing English and English-script Hindi. The second set shows three photos and one artist’s rendering of a train next to bodies of water, retrieved using a query mixing English and English-script Japanese. </figcaption>
+</figure>
+</p>
+<p>T-Bletchley can understand sentences containing multiple languages and scripts:</p>
+<p><figure class="content-center">
+    <img src="https://www.microsoft.com/en-us/research/uploads/prod/2021/11/BletchleyFig5-1024x167.png" alt="A set of four images shows a dog playing with a ball, retrieved using a query mixing English and three other languages." />
+    <figcaption class="caption">A set of four images shows a dog playing with a ball, retrieved using a query mixing English and three other languages.</figcaption>
+</figure>
+</p>
+<doc-anchor-target id="image-to-image-retrieval">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#image-to-image-retrieval">#</doc-anchor-trigger>
+        <span>Image-to-image retrieval</span>
+    </h2>
+</doc-anchor-target>
+<p>To evaluate image retrieval, we encode the given image using the image encoder and retrieve the closest image vectors and corresponding images from the index. Because T-Bletchley was trained to pick the best caption for an image, it tends to prefer semantically similar images instead of visually similar ones.</p>
+<p><figure class="content-center">
+    <img src="https://www.microsoft.com/en-us/research/uploads/prod/2021/11/BletchleyFig6-1024x224.png" alt="An image of a map of Seattle and an arrow pointing to four different images of a map of Seattle " />
+    <figcaption class="caption">An image of a map of Seattle and an arrow pointing to four different images of a map of Seattle </figcaption>
+</figure>
+</p>
+<p>The images retrieved by T-Bletchley are not necessarily similar in appearance to the query image. However, the images, all of the same geography, are ‘semantically similar.’ T-Bletchley does not return the following images from the retrieval set that look like the input image.</p>
+<p><figure class="content-center">
+    <img src="https://www.microsoft.com/en-us/research/uploads/prod/2021/11/BletchleyFig7-1024x212.png" alt="Four maps of different cities " />
+    <figcaption class="caption">Four maps of different cities </figcaption>
+</figure>
+</p>
+<doc-anchor-target id="understanding-text-within-images">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#understanding-text-within-images">#</doc-anchor-trigger>
+        <span>Understanding text within images</span>
+    </h2>
+</doc-anchor-target>
+<p>T-Bletchley is also able to understand text within images without the use of OCR technologies. In the following examples, images are directly passed to the image encoder and stored as 1024 dimensional vectors, and only the cosine similarity between these vectors is used to retrieve similar images.</p>
+<p><figure class="content-center">
+    <img src="https://www.microsoft.com/en-us/research/uploads/prod/2021/11/BlechleyFig8-1024x508.png" alt="Three sets of images. The first set shows a slide comparing microeconomics and macroeconomics. An arrow points to a series of four similar slides comparing microeconomics and macroeconomics. The second set shows a slide entitled: “HOW DOES COVID-19 SPREAD?”. An arrow points to a series of four similar slides explaining how COVID-19 is spread. The third set shows some French text with its English translation: différence entre les données primaires etsecondaires  (difference between primary and secondary data in french). An arrow points to four separate images with English text referring to “primary data” and “secondary data”. " />
+    <figcaption class="caption">Three sets of images. The first set shows a slide comparing microeconomics and macroeconomics. An arrow points to a series of four similar slides comparing microeconomics and macroeconomics. The second set shows a slide entitled: “HOW DOES COVID-19 SPREAD?”. An arrow points to a series of four similar slides explaining how COVID-19 is spread. The third set shows some French text with its English translation: différence entre les données primaires etsecondaires  (difference between primary and secondary data in french). An arrow points to four separate images with English text referring to “primary data” and “secondary data”. </figcaption>
+</figure>
+</p>
+<p>In the first example, T-Bletchley understands that the text in the image is about the differences between microeconomics and macroeconomics and retrieves similar slides. In the second example, T-Bletchley retrieves images related to COVID-19 even though T-Bletchley’s training data pre-dates COVID-19.</p>
+<p>This capability is universal—it can be used in multiple languages. The examples below show retrieval in French and Arabic.</p>
+<p><figure class="content-center">
+    <img src="https://www.microsoft.com/en-us/research/uploads/prod/2021/11/BletchleyFig9-1024x414.png" alt="An image of a text book cover titled: “La Revolution francaise”, with an arrow pointing to a set of four similar images of textbooks depicting the French Revolution and other French history.
+An image of a vintage advertisment for Coca-Cola with an arrow pointing to a set of four similar images, two in Arabic and two in English. " />
+    <figcaption class="caption">An image of a text book cover titled: “La Revolution francaise”, with an arrow pointing to a set of four similar images of textbooks depicting the French Revolution and other French history.
+An image of a vintage advertisment for Coca-Cola with an arrow pointing to a set of four similar images, two in Arabic and two in English. </figcaption>
+</figure>
+</p>
+<doc-anchor-target id="t-bletchley-model-development">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#t-bletchley-model-development">#</doc-anchor-trigger>
+        <span>T-Bletchley: model development</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="dataset">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#dataset">#</doc-anchor-trigger>
+        <span>Dataset</span>
+    </h3>
+</doc-anchor-target>
+<p>T-Bletchley was trained using billions of image-caption pairs drawn from the web.</p>
+<p>Examples of the dataset are depicted below.</p>
+<p><figure class="content-center">
+    <img src="https://www.microsoft.com/en-us/research/uploads/prod/2021/11/BletchleyFig10.png" alt="A set of three captions with a related image. The first query: “Photo of Joy Yee's Noodle Kitchen - Evanston, IL, United States. Huge selection of food”, points to a restaurant menu. The second caption: “2016 Ford Shelby GT350R – Photo Gallery  - RoadandTrack.com”, points to a photo of a white sports car. The third query: “фото кувшинов с водой”, which translates to “photo of jugs of water” in Russian, points to a photo of five clear drinking glasses being filled with water. " />
+    <figcaption class="caption">A set of three captions with a related image. The first query: “Photo of Joy Yee&#x27;s Noodle Kitchen - Evanston, IL, United States. Huge selection of food”, points to a restaurant menu. The second caption: “2016 Ford Shelby GT350R – Photo Gallery  - RoadandTrack.com”, points to a photo of a white sports car. The third query: “фото кувшинов с водой”, which translates to “photo of jugs of water” in Russian, points to a photo of five clear drinking glasses being filled with water. </figcaption>
+</figure>
+</p>
+<p>A large, diverse training dataset resulted in a robust model that can handle a wide variety of images. To achieve universality, we trained the model on a parallel corpus of 500 million translation pairs. These pairs were created by extracting sentences from document-aligned webpages from common crawl corpus. Adding the Translated Text Contrasted Task allowed us to create a language-agnostic vector representation of captions, which helped make the model much more universal.</p>
+<doc-anchor-target id="model-architecture--training">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#model-architecture--training">#</doc-anchor-trigger>
+        <span>Model architecture &amp; training</span>
+    </h2>
+</doc-anchor-target>
+<p>T-Bletchley consists of transformer-based image and text encoders which are both analogous to the <a href="https://arxiv.org/abs/1810.04805">BERT-large</a> architecture.</p>
+<p><figure class="content-center">
+    <img src="https://www.microsoft.com/en-us/research/uploads/prod/2021/11/1200x627_Bletchly_Slide5_graphics_edited_Light-2.jpg" alt="A set of two images. The image on the left is an illustration of the image text contrastive task. Images containing a paper boat, flowers and a bird are shown to be encoded by the image encoder. Corresponding captions in different languages are shown to be encoded by the text encoder. Contrastive loss is then applied over the resulting vectors. The image on the right is an illustration of the translation text contrastive task. Sentences and their translations in different languages are encoded by the text encoder and the contrastive loss is applied over the resulting vectors. " />
+    <figcaption class="caption">A set of two images. The image on the left is an illustration of the image text contrastive task. Images containing a paper boat, flowers and a bird are shown to be encoded by the image encoder. Corresponding captions in different languages are shown to be encoded by the text encoder. Contrastive loss is then applied over the resulting vectors. The image on the right is an illustration of the translation text contrastive task. Sentences and their translations in different languages are encoded by the text encoder and the contrastive loss is applied over the resulting vectors. </figcaption>
+</figure>
+</p>
+<p>Images and captions were independently encoded, and the model was then trained by applying a contrastive loss on the generated image and text vectors. Similarly, to create a language-agnostic representation, each sentence from a translation pair was independently encoded and a contrastive loss was applied over the resulting batch of vectors.</p>
+<p><figure class="content-center">
+    <img src="https://www.microsoft.com/en-us/research/uploads/prod/2021/11/1200x627_Bletchly_Slide1_graphics_edited_Light-1-1024x535.jpg" alt="An illustration of how the image text contrastive and translation text contrastive tasks work together to help align the space of images, English text and non-English text. On the left side of the illustration, the three domains—Image Domain, English Domain, and Non-English Domain--are segregated. An arrow labeled “Image-Captions training data” points to another depiction of the three domains where the image domain and the English domain intersect but the non-English domain is still separate and shown in gray to show that it’s not significantly affected. A two headed arrow with the label “Image-Text contrastive loss” is drawn between the image and English domains.
+Towards the bottom of the image, an arrow labeled “Parallel corpus training data” points to another depiction of the three domains where the English domain and the non-English domain intersect but the image domain is separate and shown in gray to indicate that it is not significantly affected. A two-headed arrow with the label “Translated Text Contrastive loss” is drawn between the English and non-English domains.
+Finally, a third arrow with the label “Resulting Effect” is drawn to the right of the image which points to a depiction of all three domains intersecting. " />
+    <figcaption class="caption">An illustration of how the image text contrastive and translation text contrastive tasks work together to help align the space of images, English text and non-English text. On the left side of the illustration, the three domains—Image Domain, English Domain, and Non-English Domain--are segregated. An arrow labeled “Image-Captions training data” points to another depiction of the three domains where the image domain and the English domain intersect but the non-English domain is still separate and shown in gray to show that it’s not significantly affected. A two headed arrow with the label “Image-Text contrastive loss” is drawn between the image and English domains.<br />
+Towards the bottom of the image, an arrow labeled “Parallel corpus training data” points to another depiction of the three domains where the English domain and the non-English domain intersect but the image domain is separate and shown in gray to indicate that it is not significantly affected. A two-headed arrow with the label “Translated Text Contrastive loss” is drawn between the English and non-English domains.
+Finally, a third arrow with the label “Resulting Effect” is drawn to the right of the image which points to a depiction of all three domains intersecting. </figcaption>
+</figure>
+</p>
+<p>In this way, despite the image caption pairs being predominantly in English, we managed to align captions in different languages with corresponding images.</p>
+<p>We leveraged the kernels in the <a href="https://github.com/microsoft/DeepSpeed">DeepSpeed</a> library (compatible with PyTorch) for our transformer’s implementation and the <a href="https://www.microsoft.com/en-us/research/publication/zero-memory-optimization-towards-training-a-trillion-parameter-models/">ZeRO optimizer</a> for training the model.</p>
+<doc-anchor-target id="in-depth-model-evaluation">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#in-depth-model-evaluation">#</doc-anchor-trigger>
+        <span>In-depth model evaluation</span>
+    </h2>
+</doc-anchor-target>
+<p>T-Bletchley advances the state of the art across multiple public benchmarks.</p>
+<doc-anchor-target id="english">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#english">#</doc-anchor-trigger>
+        <span>English</span>
+    </h3>
+</doc-anchor-target>
+<p>For this evaluation, we followed the prompt engineering and ensembling followed in Google’s <a href="https://arxiv.org/abs/2102.05918">ALIGN</a> paper. T-Bletchley outperforms Google’s ALIGN model on English image-language benchmarks and sets a new state of the art standard in zero shot image classification, an area pioneered by <a href="https://openai.com/blog/clip/">OpenAI’s CLIP model</a>.</p>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Model</th>
+<th style="text-align: center;">ImageNet</th>
+<th style="text-align: center;">CIFAR-100</th>
+<th style="text-align: center;">CIFAR-10</th>
+<th style="text-align: center;">COCO <a href="mailto:R@1">R@1</a> image-&gt;text</th>
+<th style="text-align: center;">COCO <a href="mailto:R@1">R@1</a> text-&gt;image</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://arxiv.org/abs/2102.05918">ALIGN</a></td>
+<td style="text-align: center;">76.4</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">58.6</td>
+<td style="text-align: center;">45.6</td>
+</tr>
+<tr>
+<td>T-Bletchley</td>
+<td style="text-align: center;">79.0</td>
+<td style="text-align: center;">83.5</td>
+<td style="text-align: center;">97.7</td>
+<td style="text-align: center;">59.1</td>
+<td style="text-align: center;">43.3</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>When fine-tuned for retrieval, T-Bletchley outperforms ALIGN, the previous state of the art, by more than two points on the COCO test set.</p>
+<table>
+    <thead>
+        <tr>
+            <th rowspan=2>Model</th>
+            <th colspan=2>Flickr 30k Recall @1</th>
+            <th colspan=2>COCO Recall @1</th>
+        </tr>
+        <tr>
+            <th>image -> text</th>
+            <th>text->image</th>
+            <th>image -> text</th>
+            <th>text->image</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>    
+            <td> <a href="https://arxiv.org/abs/2004.06165">OSCAR</a> </td>
+            <td>-</td>
+            <td>-</td>
+            <td>73.5</td>
+            <td>57.5</td>
+        </tr>
+        <tr>
+            <td> <a href="https://arxiv.org/abs/2102.05918">ALIGN</a> </td>
+            <td>95.3</td>
+            <td>84.9</td>
+            <td>77</td>
+            <td>59.5</td>
+        </tr>
+        <tr>
+            <td>T-Bletchley</td>
+            <td>97.1</td>
+            <td>87.4</td>
+            <td>80.2</td>
+            <td>62.3</td>
+        </tr>
+    </tbody>
+</table>
+<p>T-Bletchley achieves state-of-the-art results in English-specific tasks compared to English-only models. T-Bletchley’s English performance is not hindered by universal language support!</p>
+<doc-anchor-target id="universal">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#universal">#</doc-anchor-trigger>
+        <span>Universal</span>
+    </h3>
+</doc-anchor-target>
+<p>T-Bletchley’s universal retrieval capabilities were evaluated on the Multi30k, COCO-CN and COCO-JP datasets and compared to multilingual models. Even before fine-tuning, T-Bletchley significantly outperforms previous models.</p>
+<table>
+    <thead>
+        <tr>
+            <th rowspan=2>Setting</th>
+            <th rowspan=2>Model</th>
+            <th colspan=3>Multi30k</th>
+            <th colspan=2>COCO</th>
+        </tr>
+        <tr>
+            <th>French</th>
+            <th>text->German</th>
+            <th>image ->Czech</th>
+            <th>text->Chinese</th>
+            <th>text->Japanese</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan=2>Zero Shot</td>
+            <td><a href="https://arxiv.org/abs/2006.02635">M3P</a></td>
+            <td>27.1</td>
+            <td>36.8</td>
+            <td>20.4</td>
+            <td>32.3</td>
+            <td>33.3</td>
+        </tr>
+        <tr>
+            <td>T-Bletchley</td>
+            <td>85</td>
+            <td>83.2</td>
+            <td>81.2</td>
+            <td>81.5</td>
+            <td>64.8</td>
+        </tr>
+    </tbody>
+</table>
+<p>When T-Bletchley is fine-tuned, the model sets new state-of-the-art results in multiple languages, shown in the table below.</p>
+<table>
+    <thead>
+        <tr>
+            <th rowspan=2>Setting</th>
+            <th rowspan=2>Model</th>
+            <th colspan=3>Multi30k</th>
+            <th colspan=2>COCO</th>
+        </tr>
+        <tr>
+            <th>French</th>
+            <th>text->German</th>
+            <th>image ->Czech</th>
+            <th>text->Chinese</th>
+            <th>text->Japanese</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan=4>Zero Shot</td>
+            <td><a href="https://arxiv.org/abs/1909.03493">MULE</a></td>
+            <td>62.3</td>
+            <td>64.1</td>
+            <td>57.7</td>
+            <td>75.6</td>
+            <td>75.9</td>
+        </tr>
+        <tr>
+            <td><a href="https://arxiv.org/abs/2004.04312">SMALR</a></td>
+            <td>65.9</td>
+            <td>69.8</td>
+            <td>64.8</td>
+            <td>76.7</td>
+            <td>77.5</td>
+        </tr>
+        <tr>
+            <td><a href="https://arxiv.org/abs/2006.02635">M3P</a></td>
+            <td>73.9</td>
+            <td>82.7</td>
+            <td>72.2</td>
+            <td>86.2</td>
+            <td>87.9</td>
+        </tr>
+        <tr>
+            <td>T-Bletchley</td>
+            <td>94.6</td>
+            <td>94.3</td>
+            <td>93.6</td>
+            <td>89.0</td>
+            <td>86.3</td>
+        </tr>
+    </tbody>
+</table>
+<doc-anchor-target id="future-applications">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#future-applications">#</doc-anchor-trigger>
+        <span>Future applications</span>
+    </h3>
+</doc-anchor-target>
+<p>The goal of T-Bletchley is to create a model that understands text and images as seamlessly as humans do. The first version of T-Bletchley represents a significant breakthrough in this mission. We expect the T-Bletchley model to improve image question and answering, image search, and image-to-image search experiences in Bing, Microsoft Office and Azure.</p>
+<p><strong>Note on Responsible AI:</strong> Like other publicly available models, the Microsoft Turing models are trained with billions of pages of publicly available text and images, and hence may have picked up biases around gender, race and more from these public documents. Mitigating negative effects from these biases is a difficult, industry-wide issue and Microsoft is committed to the advancement and use of AI grounded in principles that put people first and benefit society. We are putting these <a href="https://www.microsoft.com/en-us/ai/responsible-ai?activetab=pivot1%3aprimaryr6">Microsoft AI principles</a> into practice throughout the company and have taken extensive precautionary measures to prevent these implicit biases from getting exhibited when using the models in our products. We strongly encourage developers to do the same by putting appropriate guardrails and mitigations in place before taking these models to production.</p>
+<hr />
+<p>Source : <a href="https://www.microsoft.com/en-us/research/blog/turing-bletchley-a-universal-image-language-representation-model-by-microsoft/">Microsoft.com</a></p>
+
+
+
+
+                <!-- Required only on API pages -->
+                <doc-toolbar-member-filter-no-results />
+            </div>
+
+            
+<nav class="flex mt-14">
+    <div class="w-1/2">
+        <a class="px-5 py-4 h-full flex items-center break-all md:break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="/retypesite/physics-based-simulation-by-neural-networks/">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+            <span>
+                <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
+                <span class="block mt-1">Physics Based Simulation By Neural Networks</span>
+            </span>
+        </a>
+    </div>
+
+    <div class="w-1/2">
+        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-all md:break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="/retypesite/google-pathways/">
+            <span>
+                <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
+                <span class="block mt-1">Introducing Pathways: A next-generation AI architecture</span>
+            </span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+        </a>
+    </div>
+</nav>
+
+
+        </main>
+
+        <div class="border-t dark:border-dark-650 pt-6 mb-8">
+            <footer class="flex flex-wrap items-center justify-between">
+    <div>
+        <ul class="flex flex-wrap items-center text-sm">
+</ul>
+
+    </div>
+    <div class="docs-copyright py-2 text-gray-500 dark:text-dark-350 text-sm leading-relaxed"><p>© Copyright 2021. All rights reserved.</p>
+</div>
+</footer>
+
+        </div>
+    </div>
+    
+    <!-- Rendered if sidebar right is enabled -->
+    <!-- Sidebar right skeleton-->
+    <div v-cloak class="fixed top-0 bottom-0 right-0 transform translate-x-full bg-white border-gray-200 lg:sticky lg:border-l lg:flex-shrink-0 lg:pt-6 lg:transform-none lg:w-56 lg:z-0 md:w-72 sidebar-right skeleton dark:bg-dark-850 dark:border-dark-650">
+        <div class="pl-5">
+            <div class="w-32 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+            <div class="w-48 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+            <div class="w-40 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+        </div>
+    </div>
+    
+    <!-- User should be able to hide sidebar right -->
+    <doc-sidebar-right v-cloak></doc-sidebar-right>
+</div>
+
+        </div>
+    </div>
+
+    <doc-search-mobile></doc-search-mobile>
+    <doc-back-to-top></doc-back-to-top>
+</div>
+
+
+        <div id="docs-overlay-target"></div>
+
+        <script>window.__DOCS__ = { "title": "Turing Bletchley: A Universal Image Language Representation model by Microsoft", icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    </body>
+</html>

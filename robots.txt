@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aliamini87.github.io/retypesite/sitemap.xml.gz

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="turbo-root" content="/retypesite">
+    <meta name="turbo-cache-control" content="no-cache">
+
+    <!-- Primary Meta Tags -->
+    <title>Teaching AI to perceive the world through your eyes</title>
+    <meta name="title" content="Teaching AI to perceive the world through your eyes">
+    <meta name="description" content="AI that understands the world from a first-person point of view could unlock a new era of immersive experiences, as devices like augmented reality..." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aliamini87.github.io/retypesite/facebook-learning-through-fpv/">
+    <meta property="og:title" content="Teaching AI to perceive the world through your eyes">
+    <meta property="og:description" content="AI that understands the world from a first-person point of view could unlock a new era of immersive experiences, as devices like augmented reality...">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aliamini87.github.io/retypesite/facebook-learning-through-fpv/">
+    <meta property="twitter:title" content="Teaching AI to perceive the world through your eyes">
+    <meta property="twitter:description" content="AI that understands the world from a first-person point of view could unlock a new era of immersive experiences, as devices like augmented reality...">
+    
+    <script>(function () { var el = document.documentElement, m = localStorage.getItem("/retypesite/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
+
+    <link href="/retypesite/resources/css/retype.css?v=1.11.1.692385966598" rel="stylesheet" data-turbo-track="reload" />
+
+    <script type="text/javascript" src="/retypesite/resources/js/config.js?v=1.11.1.692385966598" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/retypesite/resources/js/retype.js?v=1.11.1" defer data-turbo-track="reload"></script>
+    <script id="lunr-js" type="text/javascript" src="/retypesite/resources/js/lunr.js?v=1.11.1.692385966598" defer></script>
+</head>
+    <body>
+        <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
+    <div class="absolute bottom-0 left-0 bg-gray-100 dark:bg-dark-800" style="top: 5rem; right: 50%"></div>
+
+    <header id="docs-site-header" class="sticky top-0 z-30 flex w-full h-16 bg-white border-b border-gray-200 md:h-20 dark:bg-dark-850 dark:border-dark-650">
+    <div class="container relative flex items-center justify-between flex-grow pr-6 md:justify-start">
+        <!-- Mobile menu button skeleton -->
+        <button v-cloak class="skeleton docs-mobile-menu-button flex items-center justify-center flex-shrink-0 overflow-hidden dark:text-white focus:outline-none rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+        <div v-cloak id="docs-sidebar-toggle"></div>
+
+        <!-- Logo -->
+        <div class="flex items-center justify-between h-full py-2 md:w-75">
+            <div class="flex items-center px-2 md:px-6">
+                <a id="docs-site-logo" href="/retypesite/" class="flex items-center leading-snug text-2xl">
+                    <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">AI Notes</span>
+                </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">Blog</span>
+            </div>
+
+            <span class="hidden h-8 border-r md:inline-block dark:border-dark-650"></span>
+        </div>
+
+        <div class="flex justify-between md:flex-grow">
+            <!-- Top Nav -->
+            <nav class="hidden md:flex">
+    <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+        <li class="md:mr-6">
+            <a class="inline-flex items-center py-2 md:mb-0 text-sm text-gray-400 whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="/retypesite/">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
+                    <g fill="currentColor">
+                        <path fill-rule="evenodd" d="M11.03 2.59a1.5 1.5 0 011.94 0l7.5 6.363a1.5 1.5 0 01.53 1.144V19.5a1.5 1.5 0 01-1.5 1.5h-5.75a.75.75 0 01-.75-.75V14h-2v6.25a.75.75 0 01-.75.75H4.5A1.5 1.5 0 013 19.5v-9.403c0-.44.194-.859.53-1.144l7.5-6.363zM12 3.734l-7.5 6.363V19.5h5v-6.25a.75.75 0 01.75-.75h3.5a.75.75 0 01.75.75v6.25h5v-9.403L12 3.734z"/>
+                    </g>
+                </svg>
+                <span>Home</span>
+            </a>
+        </li>
+        <li class="md:mr-6">
+            <a class="inline-flex items-center py-2 md:mb-0 text-sm text-gray-400 whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://github.com/aliamini87/retypesite" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
+                    <g fill="currentColor">
+                        <symbol id="mark-github-icon-symbol" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></symbol><use xlink:href="#mark-github-icon-symbol" />
+                    </g>
+                </svg>
+                <span>GitHub</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+            <!-- Header Right Skeleton -->
+            <div v-cloak class="flex justify-end flex-grow skeleton">
+
+                <!-- Search input mock -->
+                <div class="relative hidden w-40 lg:block lg:max-w-sm lg:ml-auto">
+                    <div class="absolute flex items-center justify-center h-full pl-3 dark:text-dark-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-base" width="16" height="16" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation"  style="margin-bottom: 1px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                    </div>
+
+                    <input class="w-full h-10 transition-colors duration-200 ease-in bg-gray-200 border border-transparent rounded md:text-sm hover:bg-white hover:border-gray-300 focus:outline-none focus:bg-white focus:border-gray-500 dark:bg-dark-600 dark:border-dark-600 placeholder-gray-400 dark:placeholder-dark-400"
+                    style="padding: 0.625rem 0.75rem 0.625rem 2rem" type="text" placeholder="Search" />
+                </div>
+
+                <!-- Mobile search button mock -->
+                <div class="flex items-center justify-center w-10 h-10 lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 icon-base" width="20" height="20" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation"  style="margin-bottom: 0px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                </div>
+
+                <!-- Dark mode switch placehokder -->
+                <div class="w-10 h-10 lg:ml-2"></div>
+
+                <!-- History button mock -->
+                <div class="flex items-center justify-center w-10 h-10" style="margin-right: -0.625rem;">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 icon-base" width="22" height="22" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation"  style="margin-bottom: 0px;"><g fill="currentColor" ><g ><path d="M12.01 6.01c-.55 0-1 .45-1 1V12a1 1 0 00.4.8l3 2.22a.985.985 0 001.39-.2.996.996 0 00-.21-1.4l-2.6-1.92V7.01c.02-.55-.43-1-.98-1z"></path><path d="M12.01 1.91c-5.33 0-9.69 4.16-10.05 9.4l-.29-.26a.997.997 0 10-1.34 1.48l1.97 1.79c.19.17.43.26.67.26s.48-.09.67-.26l1.97-1.79a.997.997 0 10-1.34-1.48l-.31.28c.34-4.14 3.82-7.41 8.05-7.41 4.46 0 8.08 3.63 8.08 8.09s-3.63 8.08-8.08 8.08c-2.18 0-4.22-.85-5.75-2.4a.996.996 0 10-1.42 1.4 10.02 10.02 0 007.17 2.99c5.56 0 10.08-4.52 10.08-10.08.01-5.56-4.52-10.09-10.08-10.09z"></path></g></g></svg>
+                </div>
+            </div>
+
+            <div v-cloak class="flex items-center justify-end flex-grow">
+                <div id="docs-mobile-search-button"></div>
+                <doc-search-desktop></doc-search-desktop>
+
+                <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                <doc-history></doc-history>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+    <div class="container relative flex bg-white">
+        <!-- Sidebar Skeleton -->
+<div v-cloak class="fixed flex flex-col flex-shrink-0 duration-300 ease-in-out bg-gray-100 border-gray-200 sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton dark:bg-dark-800 dark:border-dark-650">
+
+    <!-- Render this div, if config.showSidebarFilter is `true` -->
+    <div class="flex items-center h-16 px-6">
+        <input class="w-full h-8 px-3 py-2 transition-colors duration-200 ease-linear bg-white border border-gray-200 rounded shadow-none text-sm focus:outline-none focus:border-gray-600 dark:bg-dark-600 dark:border-dark-600" type="text" placeholder="Filter" />
+    </div>
+
+    <div class="pl-6 mb-4 mt-1">
+        <div class="w-32 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+        <div class="w-48 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+        <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+        <div class="w-32 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+        <div class="w-48 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+        <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+    </div>
+
+
+    <div class="flex-shrink-0 mt-auto bg-transparent dark:border-dark-650">
+        <a
+    class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by"
+    target="_blank"
+    href="https://retype.com/"
+    rel="noopener"
+>
+    <span class="text-xs whitespace-nowrap">Powered by</span>
+    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+</a>
+
+    </div>
+</div>
+
+<!-- Sidebar component -->
+<doc-sidebar v-cloak>
+    <template #sidebar-footer>
+        <div
+            class="flex-shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-dark-650"
+        >
+
+            <div class="py-3 px-6 md:hidden border-b dark:border-dark-650">
+                <nav>
+                    <ul class="flex flex-wrap justify-center items-center">
+                        <li class="mr-6">
+                            <a class="block py-1 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="/index.md">Home</a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="block py-1 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://github.com/aliamini87/retypesite">GitHub</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+
+            <a
+    class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by"
+    target="_blank"
+    href="https://retype.com/"
+    rel="noopener"
+>
+    <span class="text-xs whitespace-nowrap">Powered by</span>
+    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+</a>
+
+        </div>
+    </template>
+</doc-sidebar>
+
+
+        <div class="flex-grow min-w-0 dark:bg-dark-850">
+            <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+            <div class="flex">
+    <div class="flex-grow min-w-0 px-6 md:px-16">
+        <main class="relative pt-6 pb-16">
+            <div class="docs-markdown" id="docs-content">
+                <!-- Rendered if sidebar right is enabled -->
+                <div id="docs-sidebar-right-toggle"></div>
+               
+                <!-- Page content  -->
+<doc-anchor-target id="teaching-ai-to-perceive-the-world-through-your-eyes" class="break-words">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#teaching-ai-to-perceive-the-world-through-your-eyes">#</doc-anchor-trigger>
+        <span>Teaching AI to perceive the world through your eyes</span>
+    </h1>
+</doc-anchor-target>
+<div class="-mt-3 mb-12 flex flex-wrap text-sm text-gray-400 dark:text-dark-350">
+    <div class="flex items-center flex-shrink-0">Published&nbsp;<span>2021-10-16</span></div>
+</div>
+
+<p>AI that understands the world from a first-person point of view could unlock a new era of immersive experiences, as devices like augmented reality (AR) glasses and virtual reality (VR) headsets become as useful in everyday life as smartphones. Imagine your AR device displaying exactly how to hold the sticks during a drum lesson, guiding you through a recipe, helping you find your lost keys, or recalling memories as holograms that come to life in front of you.</p>
+<p>To build these new technologies, we need to teach AI to understand and interact with the world like we do, from a first-person perspective — commonly referred to in the research community as egocentric perception. Today’s computer vision (CV) systems, however, typically learn from millions of photos and videos that are captured in third-person perspective, where the camera is just a spectator to the action. “Next-generation AI systems will need to learn from an entirely different kind of data — videos that show the world from the center of the action, rather than the sidelines,” says <a href="https://ai.facebook.com/people/kristen-grauman/">Kristen Grauman, lead research scientist at Facebook.</a></p>
+<p>Facebook AI is announcing <a href="https://ai.facebook.com/research/publications/ego4d-unscripted-first-person-video-from-around-the-world-and-a-benchmark-suite-for-egocentric-perception">Ego4D</a>, an ambitious long-term project aimed at solving research challenges in egocentric perception. We brought together a consortium of 13 universities and labs across nine countries, who collected more than 2,200 hours of first-person video in the wild, featuring over 700 participants going about their daily lives. This dramatically increases the scale of egocentric data publicly available to the research community by an order of magnitude, more than 20x greater than any other data set in terms of hours of footage. Facebook funded the project through academic gifts to each of the participating universities.</p>
+<p><figure class="content-center">
+    <img src="https://scontent-hkg4-2.xx.fbcdn.net/v/t39.2365-6/244650956_262731809117347_4121150845039607684_n.jpg?_nc_cat=104&amp;ccb=1-5&amp;_nc_sid=ad8a9d&amp;_nc_ohc=EOJhI6LYcSgAX-mboeD&amp;_nc_ht=scontent-hkg4-2.xx&amp;oh=777cdfc09f3dad6ac2944cec570337dc&amp;oe=61700265" alt="" />
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<p>In collaboration with the consortium and Facebook Reality Labs Research (FRL Research), Facebook AI also developed five benchmark challenges centered on first-person visual experience that will spur advancements toward real-world applications for future AI assistants. Ego4D’s five benchmarks are:</p>
+<ul>
+<li><p>Episodic memory: What happened when? (e.g., “Where did I leave my keys?”)</p>
+</li>
+<li><p>Forecasting: What am I likely to do next? (e.g., “Wait, you’ve already added salt to this recipe.”)</p>
+</li>
+<li><p>Hand and object manipulation: What am I doing? (e.g., “Teach me how to play the drums.”)</p>
+</li>
+<li><p>Audio-visual diarization: Who said what when? (e.g., “What was the main topic during class?”)</p>
+</li>
+<li><p>Social interaction: Who is interacting with whom? (e.g., “Help me better hear the person talking to me at this noisy restaurant.”)</p>
+</li>
+</ul>
+<p>These benchmarks will catalyze research on the building blocks necessary to develop smarter AI assistants that can understand and interact not just in the real world but also in the metaverse, where physical reality, AR, and VR all come together in a single space.</p>
+<p>The data sets will be publicly available in <a href="https://l.facebook.com/l.php?u=http%3A%2F%2Fego4d-data.org%2F&amp;h=AT3FoZ3Df70N8utZSqzXSyK_kpF1CEoQmklVoMz4tKIVJ0HLU_KdE9dSNTWHkh4lBbtFhAnFPj6Lwdk9euKTSthfT25wGOEl9CUBUtbhUVxJx032w8fO4AakWQZvH2oHDYLYLeesxv6MKQmhjBqmdw">November of this year for researchers</a> who sign Ego4D’s data use agreement. Each university team was responsible for complying with their own institutional research policy. The process involved developing a study protocol compliant with standards from institutional research ethics committees and/or review boards, including a process to obtain informed consent and/or video release from participants.</p>
+<p>As a supplement to this work, researchers from FRL used Vuzix Blade® Smart Glasses to collect an additional 400 hours of first-person video data in staged environments in our research labs with written consent from the individuals who were captured on video. This data will be released as well.</p>
+<p>Through our commitment to open science and research, we hope the AI field will be able to more rapidly spur progress in egocentric perception.</p>
+<doc-anchor-target id="why-egocentric-perception-is-hard">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#why-egocentric-perception-is-hard">#</doc-anchor-trigger>
+        <span>Why egocentric perception is hard</span>
+    </h2>
+</doc-anchor-target>
+<p>Let’s say you’re about to ride a roller coaster for the first time. In addition to the adrenaline rush and maybe some (hopefully joyous) screaming, the ride looks completely different from the rider’s perspective than it did on the ground.</p>
+<p>While it’s easy for people to relate to both first- and third-person perspectives, AI today doesn&#x27;t share that level of understanding. Strap a CV system onto a roller-coaster ride and it likely won’t have any idea what it’s looking at, even if it’s trained on hundreds of thousands of images or videos of roller coasters shown from the sidelines on the ground.</p>
+<p>“For AI systems to interact with the world the way we do, the AI field needs to evolve to an entirely new paradigm of first-person perception,” Grauman says. “That means teaching AI to understand daily life activities through human eyes in the context of real-time motion, interaction, and multisensory observations.”</p>
+<p><figure class="content-center">
+    <img src="https://scontent-hkg4-2.xx.fbcdn.net/v/t39.2365-6/244418518_1031530464301216_3359625472102924233_n.png?_nc_cat=109&amp;ccb=1-5&amp;_nc_sid=ad8a9d&amp;_nc_ohc=7BtUFtvEKy8AX8BHkPk&amp;_nc_ht=scontent-hkg4-2.xx&amp;oh=7539eef187c457d3408240bc9620bb7c&amp;oe=616FAB49" alt="" />
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<p>The Ego4D project focuses on providing researchers with the tools and benchmarks necessary to catalyze research and push the frontier of egocentric perception.</p>
+<doc-anchor-target id="unpacking-the-real-world-data-set">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#unpacking-the-real-world-data-set">#</doc-anchor-trigger>
+        <span>Unpacking the real-world data set</span>
+    </h2>
+</doc-anchor-target>
+<p>Benchmarks and data sets have historically proved to be crucial catalysts for innovation for the AI industry. After all, today’s CV systems, which can identify virtually any object in an image, were built on top of data sets and benchmarks — e.g., MNIST, COCO, and ImageNet — that provided researchers with a test bed for research on real-world images.</p>
+<p>But egocentric perception is a whole new arena. We can’t build tomorrow’s innovations using yesterday’s tools. The unprecedented scale and diversity of Ego4D is crucial for ushering in the next generation of intelligent AI systems.</p>
+<p>To build this first-of-its-kind data set, teams at each of our partner universities distributed off-the-shelf head-mounted cameras and other wearable sensors to research participants so that they could capture first-person, unscripted video of their daily lives. They focused on having participants capture video from day-to-day scenarios, such as grocery shopping, cooking, and talking while playing games and engaging in other group activities with family and friends. The video collection captures what the camera wearer chooses to gaze at in a specific environment, what the camera wearer is doing with their hands and objects in front of them, and how the camera wearer interacts with other people from the egocentric perspective. So far, the collection features camera wearers performing hundreds of activities and interactions with hundreds of different objects.</p>
+<p>The participants featured in the Ego4D data set live in the U.K., Italy, India, Japan, Saudi Arabia, Singapore, Colombia, Rwanda, and the United States, varying across ages, professions, and genders, which were self-identified. Compared with existing data sets, the Ego4D data set provides a greater diversity of scenes, people, and activities, which increases the applicability of models trained for people across backgrounds, ethnicities, occupations, and ages.</p>
+<p>We believe global representation is crucial for egocentric research because the egocentric visual experience will differ significantly across cultural and geographic contexts. If, in the future, someone is wearing AR glasses while cooking and asks an AI assistant to guide them through a curry recipe, for example, the AI system under the hood should ideally be able to recognize that cooking curry often looks different from region to region.</p>
+<doc-anchor-target id="building-intelligent-egocentric-perception">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#building-intelligent-egocentric-perception">#</doc-anchor-trigger>
+        <span>Building intelligent egocentric perception</span>
+    </h2>
+</doc-anchor-target>
+<p>“Equally important as data collection is defining the right research benchmarks or tasks,” Grauman says. “A major milestone for this project has been to distill what it means to have intelligent egocentric perception, where we recall the past, anticipate the future, and interact with people and objects.” Ego4D’s five challenging new benchmarks provide a common objective for researchers to build fundamental research for real-world perception of visual and social contexts.</p>
+<p>Building these benchmarks required rigorous annotation of our egocentric data set. For this massive annotation effort, Facebook AI leveraged trained third-party annotators for labeling the data needed to train and evaluate algorithms on our five benchmark tasks. This entailed using <a href="https://ai.facebook.com/blog/how-facebook-annotates-multimodal-training-data-for-ml/">Facebook’s Human-AI loop (Halo) annotation platform</a>, for which we wrote specific guidelines for this type of annotation task and fine-tuned the tool itself. We collected a wide variety of label types, such as dense textual narrations describing the camera wearer’s activity, spatial and temporal annotations on objects and actions, and multimodal speech transcription. In total, thousands of hours of video were transcribed and millions of annotations were collected, with sampling criteria spanning the video data from all our partners in the consortium to ensure diversity in the resulting data set. As a result, researchers can readily use the Ego4D data set for building and testing their models on our benchmarks as soon as it’s released, later this year.</p>
+<p>Here’s a breakdown of the benchmarks, which are fundamental building blocks that could form the basis for more useful AI assistants, robots, and other future innovations:</p>
+<ol>
+<li><p><strong>Episodic memory: What happened when?</strong> AI could answer freeform questions and extend your personal memory by retrieving key moments in past egocentric videos. To do this, the model must localize the response to a query within past video frames — and, when relevant, further provide 3D spatial directions in the environment. So, if you’re preparing your parents to stay with your children, you could ask your AI assistant or home robot questions, such as “Where did I leave my kid’s favorite teddy bear?”</p>
+</li>
+<li><p><strong>Forecasting: What will I do next?</strong> AI could understand how the camera wearer’s actions might affect the future state of the world, in terms of where the person is likely to move, what objects they are likely to touch, or what activity they are likely to engage in next. Forecasting actions requires not only recognizing what has happened but also looking ahead to anticipate next moves. This will allow future AI systems that deliver helpful guidance in the moment. For example, just as you’re about to grasp a salt shaker, your AI assistant could send a notification to your device saying, “Wait, you’ve already added salt.”</p>
+</li>
+<li><p>**Hand-object interaction: What am I doing and how?**Learning how hands interact with objects is crucial for coaching and instructing on daily tasks. AI must detect first-person human-object interactions, recognize grasps, and detect object state changes. This thrust is also motivated by robot learning, where a robot could gain experience vicariously through people’s experience observed in video. So, when you’re cooking a recipe, your AI assistant could instruct you on which ingredients you need and what you need to do first, understand what you’ve already done, and guide you through each pinch and dash.</p>
+</li>
+<li><p><strong>Audio-visual diarization: Who said what when?</strong> Humans use sound to understand the world and identify who said what and when. AI of the future could too. If you’re in an important class but are half-distracted because your child’s babysitter is texting you questions at the same time, you could later ask: “What were the main topics during the discussion in class today after the professor handed back our exam?”</p>
+</li>
+<li><p><strong>Social interaction: How are we interacting?</strong> Beyond recognizing sight and sound cues, understanding social interactions is core to any intelligent AI assistant. A socially intelligent AI would understand who is speaking to whom and who is paying attention to whom. So, the next time you’re at a dinner party, an AI assistant could help you better focus on what the person talking to you across the noisy table is saying.</p>
+</li>
+</ol>
+<doc-anchor-target id="whats-next-for-ego4d-and-beyond">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#whats-next-for-ego4d-and-beyond">#</doc-anchor-trigger>
+        <span>What’s next for Ego4D and beyond</span>
+    </h2>
+</doc-anchor-target>
+<p>We&#x27;re just starting to scratch the surface on egocentric perception. Through the Ego4D project, Facebook AI, FRL, and the university consortium have forged an entirely new path for academics and industry experts to build smarter, more interactive and flexible computer vision systems. And we see a not-so-distant future in which the research we’re doing today could have a positive impact on the way we live, work, and play.</p>
+<p>As AI gains a deeper understanding of how people go about life as they normally would, it can begin to contextualize and personalize experiences in ways that haven’t been possible before.</p>
+<p>“Ego4D makes it possible for AI to gain knowledge rooted in the physical and social world, gleaned through the first-person perspective of the people who live in it,” Grauman says. “Not only will AI start to understand the world around it better, it could one day be personalized at an individual level — it could know your favorite coffee mug or guide your itinerary for your next family trip. And we&#x27;re actively working on assistant-inspired research prototypes that could do just that.” ”</p>
+<p>With AI-driven capabilities supported by Ego4D’s benchmarks and trained on the data set, it’s possible for assistants to provide value in unique and meaningful ways. Through augmented memory, an AI assistant could help you recall critical pieces of information from a recent conversation with your colleague or locate where your daughter last left her bicycle helmet, and provide supplemental skills in real time to guide you through building your new IKEA furniture or following a new recipe for your dinner party. We believe the value derived from this body of work and continued advancements in the space will propel us toward this future reality.</p>
+<p>Later this year, the university consortium will release the data for purposes permitted in the licensing agreement.</p>
+<p>Early next year, researchers should look out for the Ego4D research challenge that invites AI experts around the world to teach machines to understand the first-person perspective of our daily life activity.</p>
+<p>If you’re attending the 2021 International Conference on Computer Vision, sign up for our <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Feyewear-computing.org%2FEPIC_ICCV21%2F&amp;h=AT1GvZ3cfm1Ruw2bajSWb2733nUehmbYcK6Sps92ScOsa3jUIdedk1NxbQLdvIfZi1VL_dthlrza-eKicBtoFHUFXRt0SP_2aaR39jB0qBghQbmLuiz7PB8mlPoNq_yCh02Cp-xl1z8mE__5GCAWCg">full-day Workshop on Egocentric Perception, Interaction and Computing</a> on October 17, where you can learn more, ask questions, and share feedback about Ego4D.</p>
+<p><em>The academic consortium for the Ego4D initiative includes the following lead researchers (also known as principal investigators): CV Jawahar (IIIT Hyderabad), David Crandall (Indiana University), Dima Damen (University of Bristol), Giovanni Maria Farinella (University of Catania), Haizhou Li (National University of Singapore), Kristen Grauman (Facebook AI), Bernard Ghanem (KAUST), Jitendra Malik (Facebook AI), Kris Kitani (CMU and CMU Africa), Aude Oliva (MIT), Hyun Soo Park (University of Minnesota), Jim Rehg (Georgia Tech), Yoichi Sato (University of Tokyo), Jianbo Shi (University of Pennsylvania), Antonio Torralba (MIT), Mike Zheng Shou (National University of Singapore), and Pablo Arbelaez (U. of Los Andes). <a href="https://l.facebook.com/l.php?u=http%3A%2F%2Fego4d-data.org%2F&amp;h=AT3vrfOiA7OBhQJ3UqsdyMQOPl3BHihRPzfs0KatHBnDSxhvQxWTRtSipkZSjMquwbh0RfUhaTpcEuQxeljfHbxdXezab_5E8tf7SbrqFZ53VFMQFuGNtH27Vhpo-jeVIvvpMhcfYDE-9zZE4jayZg">Click here</a> to learn more about the Ego4D consortium and project.</em></p>
+<p><a href="https://ai.facebook.com/research/publications/ego4d-unscripted-first-person-video-from-around-the-world-and-a-benchmark-suite-for-egocentric-perception">Read the full paper</a></p>
+<hr />
+<p>Source = <a href="https://ai.facebook.com/blog/teaching-ai-to-perceive-the-world-through-your-eyes?s=09">ai.facebook.com</a></p>
+
+
+
+
+                <!-- Required only on API pages -->
+                <doc-toolbar-member-filter-no-results />
+            </div>
+
+            
+<nav class="flex mt-14">
+    <div class="w-1/2">
+        <a class="px-5 py-4 h-full flex items-center break-all md:break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="/retypesite/mit-explainable-ai/">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+            <span>
+                <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
+                <span class="block mt-1">These neural networks know what they’re doing</span>
+            </span>
+        </a>
+    </div>
+
+    <div class="w-1/2">
+        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-all md:break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="/retypesite/image_transformers_speed_up/">
+            <span>
+                <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
+                <span class="block mt-1">Image Transformer Speed-Up Speed Up!</span>
+            </span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+        </a>
+    </div>
+</nav>
+
+
+        </main>
+
+        <div class="border-t dark:border-dark-650 pt-6 mb-8">
+            <footer class="flex flex-wrap items-center justify-between">
+    <div>
+        <ul class="flex flex-wrap items-center text-sm">
+</ul>
+
+    </div>
+    <div class="docs-copyright py-2 text-gray-500 dark:text-dark-350 text-sm leading-relaxed"><p>© Copyright 2021. All rights reserved.</p>
+</div>
+</footer>
+
+        </div>
+    </div>
+    
+    <!-- Rendered if sidebar right is enabled -->
+    <!-- Sidebar right skeleton-->
+    <div v-cloak class="fixed top-0 bottom-0 right-0 transform translate-x-full bg-white border-gray-200 lg:sticky lg:border-l lg:flex-shrink-0 lg:pt-6 lg:transform-none lg:w-56 lg:z-0 md:w-72 sidebar-right skeleton dark:bg-dark-850 dark:border-dark-650">
+        <div class="pl-5">
+            <div class="w-32 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+            <div class="w-48 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+            <div class="w-40 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+        </div>
+    </div>
+    
+    <!-- User should be able to hide sidebar right -->
+    <doc-sidebar-right v-cloak></doc-sidebar-right>
+</div>
+
+        </div>
+    </div>
+
+    <doc-search-mobile></doc-search-mobile>
+    <doc-back-to-top></doc-back-to-top>
+</div>
+
+
+        <div id="docs-overlay-target"></div>
+
+        <script>window.__DOCS__ = { "title": "Teaching AI to perceive the world through your eyes", icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    </body>
+</html>
