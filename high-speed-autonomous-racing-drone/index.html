@@ -25,11 +25,12 @@
     
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/retypesite/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/retypesite/resources/css/retype.css?v=1.11.1.692385966598" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/retypesite/static/microsoft-cognitive-toolkit-icon.png" rel="icon" />
+    <link href="/retypesite/resources/css/retype.css?v=1.11.1.692388892883" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/retypesite/resources/js/config.js?v=1.11.1.692385966598" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/retypesite/resources/js/config.js?v=1.11.1.692388892883" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/retypesite/resources/js/retype.js?v=1.11.1" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/retypesite/resources/js/lunr.js?v=1.11.1.692385966598" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/retypesite/resources/js/lunr.js?v=1.11.1.692388892883" defer></script>
 </head>
     <body>
         <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -45,6 +46,10 @@
         <div class="flex items-center justify-between h-full py-2 md:w-75">
             <div class="flex items-center px-2 md:px-6">
                 <a id="docs-site-logo" href="/retypesite/" class="flex items-center leading-snug text-2xl">
+                    <span class="w-10 mr-2 flex-grow-0 flex-shrink-0 overflow-hidden">
+                        <img class="max-h-10 dark:hidden md:inline-block" src="/retypesite/static/best-big-data-service-hongkong.png">
+                        <img class="max-h-10 hidden dark:inline-block" src="/retypesite/static/best-big-data-service-hongkong.png">
+                    </span>
                     <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">AI Notes</span>
                 </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">Blog</span>
             </div>
@@ -216,14 +221,6 @@
 <p>It seems inevitable that sooner or later, the performance of autonomous drones will <a href="https://spectrum.ieee.org/ai-powered-drone-extreme-acrobatics">surpass the performance of even the best human pilots</a>. Usually things in robotics that seem inevitable happen later as opposed to sooner, but drone technology seems to be the exception to this. We&#x27;ve seen an astonishing amount of progress over the past few years, even to the extent of <a href="https://spectrum.ieee.org/skydio-2-review-this-is-the-drone-you-want-to-fly">sophisticated autonomy</a> making it into the hands of consumers at an affordable price.</p>
 <p>The cutting edge of drone research right now is putting drones with relatively simple onboard sensing and computing in situations that require fast and highly aggressive maneuvers. In a paper <a href="http://rpg.ifi.uzh.ch/AgileAutonomy.html">published yesterday in <em>Science Robotics</em></a>, roboticists from <a href="http://rpg.ifi.uzh.ch/">Davide Scaramuzza&#x27;s Robotics and Perception Group at the University of Zurich</a> along with partners at Intel demonstrate a small, self-contained, fully autonomous drone that can aggressively fly through complex environments at speeds of up to 40kph.</p>
 <hr />
-<p>Video on Youtube:</p>
-<p><figure class="content-center">
-    <a href="https://www.youtube.com/watch?v=m89bNn6RFoQ">
-        <img src="https://img.youtube.com/vi/m89bNn6RFoQ/0.jpg" alt="IMAGE ALT TEXT HERE" />
-    </a>
-    <figcaption class="caption">IMAGE ALT TEXT HERE</figcaption>
-</figure>
-</p>
 <iframe width="880" height="495" src="https://www.youtube.com/embed/m89bNn6RFoQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <p>The trick here, to the extent that there&#x27;s a trick, is that the drone performs a direct mapping of sensor input (from an Intel RealSense 435 stereo depth camera) to collision-free trajectories. Conventional obstacle avoidance involves first collecting sensor data; making a map based on that sensor data; and finally making a plan based on that map. This approach works perfectly fine as long as you&#x27;re not concerned with getting all of that done quickly, but for a drone with limited onboard resources moving at high speed, it just takes too long. UZH&#x27;s approach is instead to go straight from sensor input to trajectory output, which is much faster and allows the speed of the drone to increase substantially.</p>
 <p>The convolutional network that performs this sensor-to-trajectory mapping was trained entirely in simulation, which is cheaper and easier but (I would have to guess) less fun than letting actual drones hammer themselves against obstacles over and over until they figure things out. A simulated &quot;expert&quot; drone pilot that has access to a 3D point cloud, perfect state estimation, and computation that&#x27;s not constrained by real-time requirements trains its own end-to-end policy, which is of course not achievable in real life. But then, the simulated system that will be operating under real-life constraints just learns in simulation to match the expert as closely as possible, which is how you get that expert-level performance in a way that can be taken out of simulation and transferred to a real drone without any adaptation or fine-tuning.</p>
