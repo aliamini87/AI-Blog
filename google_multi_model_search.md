@@ -1,3 +1,28 @@
+---
+authors:
+  - name: 
+    email: 
+    link:
+    avatar: 
+category:
+date: 2021-10-14
+description:
+icon:
+image: ..\static\shutterstock_250696570-Converted-1000x462.jpg
+label: null
+layout: default
+order: 8
+tags:
+title:
+visibility: public
+
+
+
+---
+
+
+
+
 # Google Search Goes Multimodal
 
 

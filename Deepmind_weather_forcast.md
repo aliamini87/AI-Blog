@@ -1,3 +1,24 @@
+---
+authors:
+  - name: 
+    email: 
+    link:
+    avatar: 
+category:
+date: 2021-10-06
+description:
+icon:
+image: ..\static\shutterstock_250696570-Converted-1000x462.jpg
+label: null
+layout: default
+order: 3
+tags:
+title:
+visibility: public
+
+---
+
+
 # DeepMind claims its AI weather forecasting model beats conventional models
 
 In a paper published in the journal _Nature_, meteorologists gave an AI model for predicting short-term weather events top rank in terms of accuracy and usefulness in 88% of cases. It marks the first time professional forecasters have expressed a preference for a machine learning-based model over conventional methods, claims DeepMind, which developed the model — paving the way to new weather forecasting approaches that leverage AI.

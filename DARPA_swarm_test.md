@@ -1,3 +1,24 @@
+---
+authors:
+  - name: 
+    email: 
+    link:
+    avatar: 
+category:
+date: 2021-10-06
+description:
+icon:
+image: ..\static\shutterstock_250696570-Converted-1000x462.jpg
+label: null
+layout: default
+order: 2
+tags:
+title:
+visibility: public
+---
+
+
+
 # Swarm grammar: DARPA to test whether single user can control 200 drones
 
 ![](https://www.c4isrnet.com/resizer/AXvTARo3-P2iPYILyvlG4SnOngc=/1024x0/filters:format(jpg):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/mco/4HAN2QMBVJESRLNMOQBIVRPLGM.jpg)

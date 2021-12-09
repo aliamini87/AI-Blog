@@ -1,3 +1,22 @@
+---
+authors:
+  - name: 
+    email: 
+    link:
+    avatar: 
+category:
+date: 2021-10-31
+description:
+icon:
+image: ..\static\shutterstock_250696570-Converted-1000x462.jpg
+label: null
+layout: default
+order: 17
+tags:
+title:
+visibility: public
+---
+
 # Introducing Pathways: A next-generation AI architecture
 
 Too often, machine learning systems overspecialize at individual tasks, when they could excel at many. That’s why we’re building Pathways—a new AI architecture that will handle many tasks at once, learn new tasks quickly and reflect a better understanding of the world.

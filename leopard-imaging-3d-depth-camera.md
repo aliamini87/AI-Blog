@@ -1,3 +1,22 @@
+---
+authors:
+  - name: 
+    email: 
+    link:
+    avatar: 
+category:
+date: 2021-10-26
+description:
+icon:
+image: ..\static\shutterstock_250696570-Converted-1000x462.jpg
+label: null
+layout: default
+order: 15
+tags:
+title:
+visibility: public
+---
+
 # Leopard Imaging Hawk 3D Depth Camera
 **A stereo camera with synchronized IMU integration**
 

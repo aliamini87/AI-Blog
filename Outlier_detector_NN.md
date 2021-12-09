@@ -1,3 +1,28 @@
+---
+authors:
+  - name: 
+    email: 
+    link:
+    avatar: 
+category:
+date: 2021-10-13
+description:
+icon:
+image: ..\static\shutterstock_250696570-Converted-1000x462.jpg
+label: null
+layout: default
+order: 6
+tags:
+title:
+visibility: public
+
+
+
+---
+
+
+
+
 # Models that recognize inputs that differ substantially from most of their training data
 
 ![LONGTAIL-1](https://cdn2.hubspot.net/hub/5871640/hubfs/LONGTAIL-1.gif?upscale=true&width=1200&upscale=true&name=LONGTAIL-1.gif)

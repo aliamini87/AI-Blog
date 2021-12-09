@@ -1,3 +1,22 @@
+---
+authors:
+  - name: 
+    email: 
+    link:
+    avatar: 
+category:
+date: 2021-11-04
+description:
+icon:
+image: ..\static\shutterstock_250696570-Converted-1000x462.jpg
+label: null
+layout: default
+order: 18
+tags:
+title:
+visibility: public
+---
+
 # Turing Bletchley: A Universal Image Language Representation model by Microsoft
 
 ![](https://www.microsoft.com/en-us/research/uploads/prod/2021/11/1400x788_Bletchly_no_logo_dot_graphic-1-1024x576.jpg)

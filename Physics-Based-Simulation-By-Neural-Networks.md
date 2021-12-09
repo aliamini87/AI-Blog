@@ -1,11 +1,20 @@
 ---
-layout: post
-title: Physics Based Simulation By Neural Networks
-subtitle: 
-cover-img: /assets/img/path.jpg
-thumbnail-img: /assets/img/thumb.png
-share-img: /assets/img/path.jpg
-tags: [books, test]
+authors:
+  - name: 
+    email: 
+    link:
+    avatar: 
+category:
+date: 2021-11-13
+description:
+icon:
+image: ..\static\shutterstock_250696570-Converted-1000x462.jpg
+label: null
+layout: default
+order: 19
+tags:
+title:
+visibility: public
 ---
 
 # Physics Based Simulation By Neural Networks

@@ -1,3 +1,28 @@
+---
+authors:
+  - name: 
+    email: 
+    link:
+    avatar: 
+category:
+date: 2021-10-14
+description:
+icon:
+image: ..\static\shutterstock_250696570-Converted-1000x462.jpg
+label: null
+layout: default
+order: 7
+tags:
+title:
+visibility: public
+
+
+
+---
+
+
+
+
 # Transition from academia to a corporate role (Andrew Ng opinion)
 
 _I’ve seen many friends transition from an academic or research role to a corporate role. The most successful ones adjusted to corporate work by shifting their mindset in a few crucial ways._

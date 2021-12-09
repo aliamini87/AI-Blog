@@ -1,3 +1,27 @@
+---
+authors:
+  - name: 
+    email: 
+    link:
+    avatar: 
+category:
+date: 2021-10-14
+description:
+icon:
+image: ..\static\shutterstock_250696570-Converted-1000x462.jpg
+label: null
+layout: default
+order: 12
+tags:
+title:
+visibility: public
+
+
+
+---
+
+
+
 # Intel open-sources AI-powered tool to spot bugs in code
 
 ![](https://venturebeat.com/wp-content/uploads/2021/09/GettyImages-1208499003-e1631641886627.jpg?zoom=2&resize=750%2C499&strip=all)

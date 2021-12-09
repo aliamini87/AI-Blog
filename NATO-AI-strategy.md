@@ -1,3 +1,22 @@
+---
+authors:
+  - name: 
+    email: 
+    link:
+    avatar: 
+category:
+date: 2021-10-23
+description:
+icon:
+image: ..\static\shutterstock_250696570-Converted-1000x462.jpg
+label: null
+layout: default
+order: 13
+tags:
+title:
+visibility: public
+---
+
 # NATO launches AI strategy and $1B fund as defense race heats up
 
 The North Atlantic Treaty Organization (NATO), the military alliance of 30 countries that border the North Atlantic Ocean, this week announced that it would adopt an 18-point AI strategy and launch a “future-proofing” fund with the goal of investing around $1 billion. Military.com [reports](https://www.military.com/daily-news/2021/10/21/nato-plans-ai-strategy-1b-investment-fund-it-seeks-stay-ahead-tech-realm.html) that U.S. Defense Secretary Lloyd Austin will join other NATO members in Brussels, Belgium, the alliance’s headquarters, to formally approve the plans over two days of talks.

@@ -1,3 +1,28 @@
+---
+authors:
+  - name: 
+    email: 
+    link:
+    avatar: 
+category:
+date: 2021-10-16
+description:
+icon:
+image: ..\static\shutterstock_250696570-Converted-1000x462.jpg
+label: null
+layout: default
+order: 11
+tags:
+title:
+visibility: public
+
+
+
+---
+
+
+
+
 # These neural networks know what they’re doing
 A certain type of artificial intelligence agent can learn the cause-and-effect basis of a navigation task during training.
 

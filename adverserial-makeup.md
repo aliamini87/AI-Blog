@@ -1,5 +1,23 @@
-## Adverserial Makeup
+---
+authors:
+  - name: 
+    email: 
+    link:
+    avatar: 
+category:
+date: 2021-10-1
+description:
+icon:
+image: ..\static\shutterstock_250696570-Converted-1000x462.jpg
+label: null
+layout: default
+order: 0
+tags:
+title:
+visibility: public
+---
 
+# Adverserial Makeup
 
 Drop off your adversarial [hats](https://arxiv.org/abs/1908.08705?utm_campaign=The%20Batch&utm_source=hs_email&utm_medium=email&_hsenc=p2ANqtz-8QsJWqT2o_J1ShIjCrSsYkFvMAnCBhaA2EXAdYbnlE13tMsuEANbyDdvf7vHFb3GJaHUSl), [eyeglasses](https://users.ece.cmu.edu/~lbauer/papers/2016/ccs2016-face-recognition.pdf?utm_campaign=The%20Batch&utm_source=hs_email&utm_medium=email&_hsenc=p2ANqtz-8QsJWqT2o_J1ShIjCrSsYkFvMAnCBhaA2EXAdYbnlE13tMsuEANbyDdvf7vHFb3GJaHUSl), and [tee shirts](https://arxiv.org/abs/1910.11099?utm_campaign=The%20Batch&utm_source=hs_email&utm_medium=email&_hsenc=p2ANqtz-8QsJWqT2o_J1ShIjCrSsYkFvMAnCBhaA2EXAdYbnlE13tMsuEANbyDdvf7vHFb3GJaHUSl) to the second-hand store. The latest fashion statement is adversarial makeup.  
 **What’s new:** Researchers at Ben-Gurion University and NEC developed a [system](https://arxiv.org/abs/2109.06467?utm_campaign=The%20Batch&utm_source=hs_email&utm_medium=email&_hsenc=p2ANqtz-8QsJWqT2o_J1ShIjCrSsYkFvMAnCBhaA2EXAdYbnlE13tMsuEANbyDdvf7vHFb3GJaHUSl) for applying natural-looking makeup that makes people unrecognizable to face recognition models. 

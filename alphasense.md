@@ -1,3 +1,26 @@
+---
+authors:
+  - name: 
+    email: 
+    link:
+    avatar: 
+category:
+date: 2021-10-06
+description:
+icon:
+image: ..\static\shutterstock_250696570-Converted-1000x462.jpg
+label: null
+layout: default
+order: 4
+tags:
+title:
+visibility: public
+
+---
+
+
+
+
 # What is Alphasense Position?
 
 Alphasense Position is a multi-camera, industrial grade, Visual-SLAM-in-a-box solution for mobile robots. The system is an Edge AI solution that provides full 3D positioning for any kind of ground vehicles in every environment; even in fast-changing and dynamic spaces.

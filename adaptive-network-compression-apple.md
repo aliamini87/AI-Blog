@@ -1,3 +1,22 @@
+---
+authors:
+  - name: 
+    email: 
+    link:
+    avatar: 
+category:
+date: 2021-10-26
+description:
+icon:
+image: ..\static\shutterstock_250696570-Converted-1000x462.jpg
+label: null
+layout: default
+order: 14
+tags:
+title:
+visibility: public
+---
+
 # Adaptive Network Compression by Apple Research
 
 These are the title and abstract of their [paper](https://arxiv.org/abs/2110.04252?s=09).

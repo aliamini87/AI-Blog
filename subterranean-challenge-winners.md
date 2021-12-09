@@ -1,3 +1,25 @@
+---
+authors:
+  - name: 
+    email: 
+    link:
+    avatar: 
+category:
+date: 2021-10-01
+description:
+icon:
+image: ..\static\shutterstock_250696570-Converted-1000x462.jpg
+label: null
+layout: default
+order: 1
+tags:
+title:
+visibility: public
+
+---
+
+
+
 ![](https://robohub.org/wp-content/uploads/2021/09/darpa-subterranean-challenge-1024x576.png)
 
 The [DARPA Subterranean Challenge](https://subtchallenge.com/) planned to develop novel approaches to rapidly map, explore and search underground environments in time-sensitive operations critical for the civilian and military domains alike. In the Final Event, DARPA designed an environment involving branches representing all three challenges of the “Tunnel Circuit”, the “Urban Circuit” and the “Cave Circuit”. Robots had to explore, search for objects (“artifacts”) of interest, and report their accurate location within underground tunnels, infrastructure similar to a subway, and natural caves and paths with extremely confined geometries, tough terrain, and severe visual degradation (including dense smoke).

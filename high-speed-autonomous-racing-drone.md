@@ -1,3 +1,28 @@
+---
+authors:
+  - name: 
+    email: 
+    link:
+    avatar: 
+category:
+date: 2021-10-08
+description:
+icon:
+image: ..\static\shutterstock_250696570-Converted-1000x462.jpg
+label: null
+layout: default
+order: 5
+tags:
+title:
+visibility: public
+
+
+
+---
+
+
+
+
 #  Autonomous Racing Drones Dodge Through Forests at 40 kph
 
 Training in simulation gives these drones impressive flying skills 

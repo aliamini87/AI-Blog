@@ -2,10 +2,20 @@ input: .
 output: .retype
 url: https://aliamini87.github.io/retypesite/
 branding:
-  title: Faraabin
-  label: Docs
+  title: AI Notes
+  label: Blog
+  logo: static\best-big-data-service-hongkong.png
 links:
-- text: Getting Started
-  link: https://retype.com/guides/getting-started/
+  - text: Home
+    link: /index.md
+    icon: home
+
+  - text: GitHub
+    link: https://github.com/aliamini87/retypesite
+    icon: mark-github
+    target: blank
+
+
+favicon: static\microsoft-cognitive-toolkit-icon.png
 footer:
   copyright: "&copy; Copyright {{ year }}. All rights reserved."

@@ -1,3 +1,28 @@
+---
+authors:
+  - name: 
+    email: 
+    link:
+    avatar: 
+category:
+date: 2021-10-16
+description:
+icon:
+image: ..\static\shutterstock_250696570-Converted-1000x462.jpg
+label: null
+layout: default
+order: 10
+tags:
+title:
+visibility: public
+
+
+
+---
+
+
+
+
 # Teaching AI to perceive the world through your eyes
 
 AI that understands the world from a first-person point of view could unlock a new era of immersive experiences, as devices like augmented reality (AR) glasses and virtual reality (VR) headsets become as useful in everyday life as smartphones. Imagine your AR device displaying exactly how to hold the sticks during a drum lesson, guiding you through a recipe, helping you find your lost keys, or recalling memories as holograms that come to life in front of you.

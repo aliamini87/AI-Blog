@@ -1,3 +1,22 @@
+---
+authors:
+  - name: 
+    email: 
+    link:
+    avatar: 
+category:
+date: 2021-10-31
+description:
+icon:
+image: ..\static\shutterstock_250696570-Converted-1000x462.jpg
+label: null
+layout: default
+order: 16
+tags:
+title:
+visibility: public
+---
+
 # Adobe has built a deepfake tool, but it doesn’t know what to do with it
 
 ![](https://cdn.vox-cdn.com/uploads/chorus_image/image/70052463/adobe_project_morpheus.0.gif)
