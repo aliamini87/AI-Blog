@@ -4,7 +4,7 @@ url: https://aliamini87.github.io/retypesite/
 branding:
   title: AI Notes
   label: Blog
-  logo: static\best-big-data-service-hongkong.png
+  logo: static/best-big-data-service-hongkong.png
 links:
   - text: Home
     link: /index.md
@@ -16,6 +16,6 @@ links:
     target: blank
 
 
-favicon: static\microsoft-cognitive-toolkit-icon.png
+favicon: static/microsoft-cognitive-toolkit-icon.png
 footer:
   copyright: "&copy; Copyright {{ year }}. All rights reserved."

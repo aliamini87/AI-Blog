@@ -26,7 +26,7 @@ The [DARPA Subterranean Challenge](https://subtchallenge.com/) planned to develo
 
 Team CERBERUS deployed a diverse set of robots with the prime systems being four ANYmal C legged systems. In the Prize Round of the Final Event, the team won the competition and scored 23 points by correctly detecting and localizing 23 of 40 of the artifacts DARPA had placed inside the environment. The second team, “CSIRO Data61” also scored 23 points but reported the last artifact with a slight further delay to DARPA thus the tiebraker was in favor of Team CERBERUS. The third team, “MARBLE” scored 18 points.
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/mkW3caX0SGU/0.jpg)](https://www.youtube.com/watch?v=mkW3caX0SGU)
+<iframe width="880" height="495" src="https://www.youtube.com/embed/mkW3caX0SGU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 The DARPA Subterranean Challenge was one of the rare types of global robotic competition events pushing the frontiers for resilient autonomy and calling teams to develop novel and innovative solutions with the capacity to help critical sectors such as search and rescue personnel and the industry in domains such as mining and beyond. The level of achievement of Team CERBERUS is best understood by looking at all the competitors in the “Systems Competition” of the Final Event. The participating teams including members from top international institutions, namely:
 

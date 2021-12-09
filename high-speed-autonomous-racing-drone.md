@@ -36,11 +36,6 @@ The cutting edge of drone research right now is putting drones with relatively s
 
 ___
 
-Video on Youtube:
-
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/m89bNn6RFoQ/0.jpg)](https://www.youtube.com/watch?v=m89bNn6RFoQ)
-
-
 <iframe width="880" height="495" src="https://www.youtube.com/embed/m89bNn6RFoQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
