@@ -8,7 +8,7 @@ category:
 date: 2021-10-06
 description:
 icon:
-image: ..\static\shutterstock_250696570-Converted-1000x462.jpg
+image: 
 label: null
 layout: default
 order: 2
