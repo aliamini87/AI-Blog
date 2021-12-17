@@ -29,9 +29,9 @@ Researchers from NVIDIA, the University of Toronto, and the Vector Institute hav
 
 YouTuber and graphics researcher Dr. Károly Zsolnai-Fehér breaks down the research on this innovative technology in his YouTube series: _Two Minute Papers_. This video highlights how the researchers can capture individuals using AI solely through video input to translate it into pose of the person and digital avatar. They can give the avatar a physics simulation to negate the conventional challenges of foot sliding and temporal inconsistencies or flickering. Check out the video below:
 
-<iframe width="853" height="480" src="https://www.youtube.com/embed/MrKlPvWvQ2Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="683" height="384" src="https://www.youtube.com/embed/MrKlPvWvQ2Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-_Figure 2: A video presenting the paper “Physics-based Human Motion Estimation and Synthesis from Videos in 2 minutes.”_
+_A video presenting the paper “Physics-based Human Motion Estimation and Synthesis from Videos in 2 minutes.”_
 
 “In this paper, we introduced a new framework for training motion synthesis models from raw video pose estimations without making use of motion capture data,” Kevin Xie explains in the paper.
 
